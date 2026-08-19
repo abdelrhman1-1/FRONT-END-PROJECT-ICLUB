@@ -1,1 +1,286 @@
 
+/* =========================
+   General & Reset
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8faff;
+    color: #1f2937;
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================
+   Header
+========================= */
+.header {
+    width: 100%;
+    height: 72px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
+    border-bottom: 1px solid #e8edf5;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2867d7;
+    font-size: 25px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1f2d3d;
+    letter-spacing: -0.5px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #5d6675;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #2867d7;
+}
+
+.bookings-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #2867d7;
+    color: white !important;
+    padding: 11px 18px;
+    border-radius: 7px;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.bookings-btn:hover {
+    background-color: #1f56bd;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 60px;
+    gap: 40px;
+    background-color: #ffffff;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #3b82f6;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+.hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+    flex: 1;
+}
+
+.feature-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    border-radius: 12px;
+    color: #3b82f6;
+    flex-shrink: 0;
+}
+
+.feature-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.feature-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.feature-copy h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.feature-copy p {
+    font-size: 13px;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================================
+   YOUR TASK STYLES HERE: Confirmation Box
+======================================================== */
+
+
+
+
+/* =========================
+   Bottom Features / Footer
+========================= */
+.bottom-features {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.bottom-feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bottom-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #e4e9f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3976db;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.bottom-feature h3 {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.bottom-feature p {
+    color: #718096;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* =========================
+   Responsive Styles
+========================= */
+@media (max-width: 950px) {
+    .bottom-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 25px;
+    }
+    .navbar {
+        gap: 15px;
+    }
+    .navbar a:not(.bookings-btn) {
+        display: none;
+    }
+    .bookings-btn {
+        padding: 10px 14px;
+    }
+}
+
+@media (max-width: 700px) {
+    .features {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 450px) {
+    .bottom-features {
+        grid-template-columns: 1fr;
+    }
+}
