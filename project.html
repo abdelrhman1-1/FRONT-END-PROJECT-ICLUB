@@ -7,6 +7,8 @@
     <title>Bookly - Book Your Service</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="project.css">
 </head>
@@ -86,15 +88,360 @@
             </div>
         </section>
 
-        <!-- ======================================================== -->
-        <!-- PLACEHOLDER: Missing Content (Service / Date Selection)   -->
-        <!-- ======================================================== -->
+       <!-- =========================
+     BOOKING SECTION
+========================= -->
+
+<section class="booking-section pt-5" id="services">
+
+    <div class="container">
+
+        <!-- Booking Board -->
+        <div class="booking-board grid grid-cols-[minmax(0,2.2fr)_minmax(280px,0.8fr)] max-[1000px]:grid-cols-1 bg-white border border-[#e8edf5] rounded-[14px] overflow-hidden shadow-[0_4px_20px_rgba(30,41,59,0.04)]">
+
+            <!-- =========================
+                 LEFT SIDE
+            ========================== -->
+
+            <div class="booking-main px-6 py-[30px] max-[480px]:px-4 max-[480px]:py-6">
+
+                <!-- STEP 1: SERVICE -->
+                <div class="booking-step w-full">
+
+                    <h2 class="step-title m-0 mb-[22px] text-[#1e293b] text-base font-bold">
+                        1. Choose a service
+                    </h2>
+
+                    <div class="service-grid grid grid-cols-4 gap-3 max-[768px]:grid-cols-2 max-[480px]:gap-2">
+
+                        <!-- Haircut -->
+                        <button class="service-card active relative min-h-[118px] max-[480px]:min-h-[105px] flex flex-col items-start justify-center p-[18px] max-[480px]:p-[14px] bg-white border border-[#e8edf5] rounded-[10px] text-[#475569] text-left cursor-pointer transition-[border-color,box-shadow,transform] duration-200 ease-in-out hover:border-[#b9cdf5] hover:-translate-y-px [&.active]:p-[17px] [&.active]:border-2 [&.active]:border-[#2867d7] [&.active]:shadow-[0_0_0_1px_rgba(40,103,215,0.04)] max-[480px]:[&.active]:p-[13px]" type="button">
+
+                            <span class="service-icon w-[34px] h-[34px] mb-[10px] flex items-center justify-center text-[#2867d7] text-[17px]">
+                                <i class="fa-solid fa-scissors"></i>
+                            </span>
+
+                            <span class="service-info flex flex-col gap-[3px]">
+                                <strong class="text-[#1e293b] text-sm font-bold">Haircut</strong>
+                                <small class="text-[#94a3b8] text-xs">30 min</small>
+                            </span>
+
+                            <span class="service-check absolute -top-[7px] -right-[7px] w-[22px] h-[22px] flex items-center justify-center bg-[#2867d7] border-2 border-white rounded-full text-white text-[10px]">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+
+                        </button>
 
 
-        <!-- ======================================================== -->
-        <!-- YOUR TASK HERE: Confirmation Box                         -->
-        <!-- ======================================================== -->
-        <!-- Add your booking confirmed banner/box element here -->
+                        <!-- Beard Trim -->
+                        <button class="service-card relative min-h-[118px] max-[480px]:min-h-[105px] flex flex-col items-start justify-center p-[18px] max-[480px]:p-[14px] bg-white border border-[#e8edf5] rounded-[10px] text-[#475569] text-left cursor-pointer transition-[border-color,box-shadow,transform] duration-200 ease-in-out hover:border-[#b9cdf5] hover:-translate-y-px [&.active]:p-[17px] [&.active]:border-2 [&.active]:border-[#2867d7] [&.active]:shadow-[0_0_0_1px_rgba(40,103,215,0.04)] max-[480px]:[&.active]:p-[13px]" type="button">
+
+                            <span class="service-icon w-[34px] h-[34px] mb-[10px] flex items-center justify-center text-[#2867d7] text-[17px]">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+
+                            <span class="service-info flex flex-col gap-[3px]">
+                                <strong class="text-[#1e293b] text-sm font-bold">Beard Trim</strong>
+                                <small class="text-[#94a3b8] text-xs">20 min</small>
+                            </span>
+
+                        </button>
+
+
+                        <!-- Hair Color -->
+                        <button class="service-card relative min-h-[118px] max-[480px]:min-h-[105px] flex flex-col items-start justify-center p-[18px] max-[480px]:p-[14px] bg-white border border-[#e8edf5] rounded-[10px] text-[#475569] text-left cursor-pointer transition-[border-color,box-shadow,transform] duration-200 ease-in-out hover:border-[#b9cdf5] hover:-translate-y-px [&.active]:p-[17px] [&.active]:border-2 [&.active]:border-[#2867d7] [&.active]:shadow-[0_0_0_1px_rgba(40,103,215,0.04)] max-[480px]:[&.active]:p-[13px]" type="button">
+
+                            <span class="service-icon w-[34px] h-[34px] mb-[10px] flex items-center justify-center text-[#2867d7] text-[17px]">
+                                <i class="fa-solid fa-paintbrush"></i>
+                            </span>
+
+                            <span class="service-info flex flex-col gap-[3px]">
+                                <strong class="text-[#1e293b] text-sm font-bold">Hair Color</strong>
+                                <small class="text-[#94a3b8] text-xs">60 min</small>
+                            </span>
+
+                        </button>
+
+
+                        <!-- Shave -->
+                        <button class="service-card relative min-h-[118px] max-[480px]:min-h-[105px] flex flex-col items-start justify-center p-[18px] max-[480px]:p-[14px] bg-white border border-[#e8edf5] rounded-[10px] text-[#475569] text-left cursor-pointer transition-[border-color,box-shadow,transform] duration-200 ease-in-out hover:border-[#b9cdf5] hover:-translate-y-px [&.active]:p-[17px] [&.active]:border-2 [&.active]:border-[#2867d7] [&.active]:shadow-[0_0_0_1px_rgba(40,103,215,0.04)] max-[480px]:[&.active]:p-[13px]" type="button">
+
+                            <span class="service-icon w-[34px] h-[34px] mb-[10px] flex items-center justify-center text-[#2867d7] text-[17px]">
+                                <i class="fa-solid fa-razor"></i>
+                            </span>
+
+                            <span class="service-info flex flex-col gap-[3px]">
+                                <strong class="text-[#1e293b] text-sm font-bold">Shave</strong>
+                                <small class="text-[#94a3b8] text-xs">20 min</small>
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Divider -->
+                <div class="booking-divider h-px my-[22px] bg-[#e8edf5]"></div>
+
+
+                <!-- STEP 2: DATE & TIME -->
+                <div class="booking-step w-full">
+
+                    <h2 class="step-title m-0 mb-[22px] text-[#1e293b] text-base font-bold">
+                        2. Select date & time
+                    </h2>
+
+                    <div class="date-time-layout grid grid-cols-[280px_minmax(0,1fr)] gap-4 max-[768px]:grid-cols-1">
+
+                        <!-- =========================
+                             CALENDAR
+                        ========================== -->
+
+                        <div class="calendar p-3 border border-[#e8edf5] rounded-[10px] bg-white max-[768px]:max-w-[360px]">
+
+                            <!-- Calendar Header -->
+                            <div class="calendar-header flex items-center justify-between mb-[18px] px-1">
+
+                                <button
+                                    class="calendar-arrow w-7 h-7 flex items-center justify-center bg-transparent border-none rounded-md text-[#64748b] cursor-pointer transition-colors duration-200 hover:bg-[#eff6ff] hover:text-[#2867d7]"
+                                    type="button"
+                                    aria-label="Previous month"
+                                >
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </button>
+
+                                <strong class="text-[#1e293b] text-sm font-bold">
+                                    May 2026
+                                </strong>
+
+                                <button
+                                    class="calendar-arrow w-7 h-7 flex items-center justify-center bg-transparent border-none rounded-md text-[#64748b] cursor-pointer transition-colors duration-200 hover:bg-[#eff6ff] hover:text-[#2867d7]"
+                                    type="button"
+                                    aria-label="Next month"
+                                >
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+
+                            </div>
+
+
+                            <!-- Weekdays -->
+                            <div class="calendar-weekdays grid grid-cols-7 mb-2 text-center">
+
+                                <span class="text-[#94a3b8] text-[11px] font-semibold">Su</span>
+                                <span class="text-[#94a3b8] text-[11px] font-semibold">Mo</span>
+                                <span class="text-[#94a3b8] text-[11px] font-semibold">Tu</span>
+                                <span class="text-[#94a3b8] text-[11px] font-semibold">We</span>
+                                <span class="text-[#94a3b8] text-[11px] font-semibold">Th</span>
+                                <span class="text-[#94a3b8] text-[11px] font-semibold">Fr</span>
+                                <span class="text-[#94a3b8] text-[11px] font-semibold">Sa</span>
+
+                            </div>
+
+
+                            <!-- Days -->
+                            <div class="calendar-days grid grid-cols-7 gap-1">
+
+                                <!-- JavaScript generates the days -->
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================
+                             TIME SLOTS
+                        ========================== -->
+
+                        <div class="time-section min-w-0">
+
+                            <div class="time-grid grid grid-cols-3 gap-[10px] max-[480px]:grid-cols-2 max-[480px]:gap-2">
+
+                                <!-- JavaScript generates time slots -->
+
+                            </div>
+
+                            <p class="timezone flex items-center gap-[6px] mt-4 text-[#94a3b8] text-[11px]">
+
+                                <i class="fa-regular fa-clock text-[#64748b]"></i>
+
+                                <span>
+                                    All times are in your local timezone
+                                </span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 RIGHT SIDE
+                 BOOKING SUMMARY
+            ========================== -->
+
+            <aside class="booking-summary px-6 py-[30px] bg-[#fbfcff] border-l border-[#e8edf5] max-[1000px]:border-t max-[1000px]:border-l-0 max-[480px]:px-4 max-[480px]:py-6">
+
+                <h2 class="summary-title m-0 mb-6 text-[#1e293b] text-base font-bold">
+                    Booking Summary
+                </h2>
+
+
+                <!-- Selected Service -->
+                <div class="summary-service flex items-center gap-3 p-4 mb-6 bg-white border border-[#e8edf5] rounded-[10px]">
+
+                    <div class="summary-service-icon w-10 h-10 shrink-0 flex items-center justify-center bg-[#eff6ff] rounded-full text-[#2867d7] text-base">
+
+                        <i class="fa-solid fa-scissors"></i>
+
+                    </div>
+
+                    <div class="flex flex-col gap-[3px]">
+
+                        <strong class="text-[#1e293b] text-sm font-bold">
+                            Haircut
+                        </strong>
+
+                        <span class="text-[#94a3b8] text-xs">
+                            30 min
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Booking Details -->
+                <div class="summary-details flex flex-col gap-[14px] pb-5 border-b border-[#e8edf5]">
+
+                    <div class="summary-row flex items-center justify-between gap-5">
+
+                        <span class="text-[#64748b] text-[13px]">
+                            Date
+                        </span>
+
+                        <strong class="text-[#475569] text-[13px] font-medium text-right">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row flex items-center justify-between gap-5">
+
+                        <span class="text-[#64748b] text-[13px]">
+                            Time
+                        </span>
+
+                        <strong class="text-[#475569] text-[13px] font-medium text-right">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row flex items-center justify-between gap-5">
+
+                        <span class="text-[#64748b] text-[13px]">
+                            Price
+                        </span>
+
+                        <strong class="text-[#475569] text-[13px] font-medium text-right">
+                            $20.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Total -->
+                <div class="summary-total flex items-center justify-between py-5">
+
+                    <span class="text-[#1e293b] text-base font-bold">
+                        Total
+                    </span>
+
+                    <strong class="text-[#1e293b] text-xl font-bold">
+                        $20.00
+                    </strong>
+
+                </div>
+
+
+                <!-- Continue -->
+                <button
+                    class="continue-button w-full px-5 py-3 bg-[#2867d7] border-none rounded-[7px] text-white text-sm font-semibold cursor-pointer transition-colors duration-200 hover:enabled:bg-[#1f56bd] hover:enabled:-translate-y-px disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    type="button"
+                >
+                    Continue
+                </button>
+
+
+                <!-- Security -->
+                <div class="secure-booking flex items-center justify-center gap-[6px] mt-[14px] text-[#94a3b8] text-[11px]">
+
+                    <i class="fa-solid fa-lock text-[10px]"></i>
+
+                    <span>
+                        Secure booking
+                    </span>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <!-- =========================
+             CONFIRMATION
+        ========================== -->
+
+        <div class="confirmation flex items-center justify-between gap-6 mt-5 px-7 py-5 bg-[#f4fffc] border border-[#d5f1e8] rounded-[10px] max-[768px]:flex-col max-[768px]:items-start max-[480px]:p-[18px]">
+
+            <div class="confirmation-content flex items-center gap-4">
+
+                <div class="confirmation-icon w-[42px] h-[42px] shrink-0 flex items-center justify-center border-[3px] border-[#25c997] rounded-full text-[#25c997] text-[17px]">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </div>
+
+                <div>
+
+                    <h3 class="m-0 mb-[3px] text-[#1e293b] text-sm font-bold">
+                        Booking confirmed!
+                    </h3>
+
+                    <p class="m-0 text-[#64748b] text-xs">
+                        You're all set. We've sent the details to your email.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="#bookings"
+                class="view-bookings px-[18px] py-[10px] bg-white border border-[#e8edf5] rounded-[7px] text-[#475569] text-xs font-semibold whitespace-nowrap transition-colors duration-200 hover:border-[#2867d7] hover:text-[#2867d7] max-[768px]:w-full max-[768px]:text-center"
+            >
+                View My Bookings
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 
     </main>
@@ -132,6 +479,8 @@
             </div>
         </section>
     </footer>
+
+    <script src="project.js"></script>
 
 </body>
 
